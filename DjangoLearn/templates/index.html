@@ -8,6 +8,11 @@
     <script src="main.js"></script>
 </head>
 <body>
-    Hello World ! ok
+    Hello World ! <br>
+    {% for i in family %}
+        <li>{{i}}</li>
+    {% endfor %}
+    <br>
+    developed by : {{developer}}
 </body>
 </html>
