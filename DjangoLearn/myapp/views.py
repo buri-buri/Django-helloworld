@@ -4,7 +4,8 @@ from django.http import HttpResponse
 def index(request):
     developer='sagar kaushik'
     family=['sagar','shivam','varsha','vinita']
-    d={'developer':developer,'family':family}
+    check=True
+    d={'developer':developer,'family':family,'check':check}
     response=render(request,'myapp\index.html',d)
     return response
 def hello(request):

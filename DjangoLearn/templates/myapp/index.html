@@ -1,10 +1,20 @@
 {% extends 'myapp\base.html' %}
+{% block head %}
+    <style>
+        .bold {
+            font-weight: 900;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-<h1>Hello World !</h1>
-<ul>
-{% for i in family %}
-    <li>{{i}}</li>
-    {% endfor %}
-</ul>
-<span>Developer : {{developer}}</span>
+    <h1>Hello World !</h1>
+    <ul>    
+        {% for i in family %}
+            <li class="{% cycle 'bold' '' %}">{{i}}</li>
+        {% endfor %}
+    </ul>
+    {% if check %}
+        <span>Developer : {{developer}}</span>
+    {% endif %}
 {% endblock%}
