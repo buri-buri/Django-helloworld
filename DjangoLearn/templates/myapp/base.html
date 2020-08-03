@@ -6,13 +6,11 @@
     <title>Hello World Myapp</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
+    {% block head %}
+    {%endblock%}
 </head>
-<body>
-    Hello World ! <br>
-    {% for i in family %}
-        <li>{{i}}</li>
-    {% endfor %}
-    <br>
-    developed by : {{developer}}
-</body>
+    <body>
+        {% block body %}
+        {%endblock%}
+    </body>
 </html>

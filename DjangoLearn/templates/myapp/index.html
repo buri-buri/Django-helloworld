@@ -1,0 +1,10 @@
+{% extends 'myapp\base.html' %}
+{% block body %}
+<h1>Hello World !</h1>
+<ul>
+{% for i in family %}
+    <li>{{i}}</li>
+    {% endfor %}
+</ul>
+<span>Developer : {{developer}}</span>
+{% endblock%}
