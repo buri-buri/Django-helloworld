@@ -7,3 +7,5 @@ def index(request):
     d={'developer':developer,'family':family}
     response=render(request,'myapp\index.html',d)
     return response
+def hello(request):
+    return render(request,'myapp\hello.html')
