@@ -4,7 +4,7 @@ from django.db import models
 class Student(models.Model):
     GENDERS=(
         ('F','Female'),
-        ('M','Male')
+        ('M','Male'),
     )
     name=models.CharField(max_length=256)
     roll_no=models.IntegerField()

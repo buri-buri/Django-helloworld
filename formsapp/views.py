@@ -8,9 +8,9 @@ def index(request):
     }
     return  render(request,'formsapp/index.html',d)
 def student(request):
-    student=models.Student.objects.all()
+    students=models.Student.objects.all()
     d={
-        'student':student
+        'students':students
     }
     return render(request,'formsapp/student.html',d)
 def addstudent(request):
@@ -20,7 +20,8 @@ def addstudent(request):
         studentform=forms.Studentform(request.POST)
         if(studentform.is_valid()):
             student=studentform.save()
-            return HttpResponseRedirect('/students')
+            return HttpResponseRedirect('/formsapp/students')
+
     d={
         'studentform':studentform
     }
