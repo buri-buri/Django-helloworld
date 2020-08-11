@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'modelapp',
     'relationshipapp',
     'formsapp',
+    'genericviewapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
